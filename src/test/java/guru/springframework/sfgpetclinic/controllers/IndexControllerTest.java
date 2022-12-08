@@ -7,15 +7,25 @@ import static org.junit.jupiter.api.Assertions.*;
 
 class IndexControllerTest {
 
+    IndexController indexController;
+
+
     @BeforeEach
     void setUp() {
+        indexController = new IndexController();
+
     }
 
     @Test
     void index() {
+
+        assertEquals("index", indexController.index());
+//        assertEquals("indexd", indexController.index(), "Wrong View Returned");
+
     }
 
     @Test
     void oupsHandler() {
+        assertTrue("asdf".equals(indexController.oupsHandler()), () -> "This is some expensive" + " message to build" + " for my test.");
     }
 }
