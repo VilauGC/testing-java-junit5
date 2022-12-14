@@ -15,6 +15,5 @@ class PersonTest {
         assertAll("Test Props set",
                 () -> assertEquals("Joe", person.getFirstName(), "First Name Failed"),
                 () -> assertEquals("Hoe", person.getLastName(), "Last name failed"));
-
     }
 }
