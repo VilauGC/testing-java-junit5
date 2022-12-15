@@ -1,5 +1,7 @@
 package guru.springframework.sfgpetclinic.controllers;
 
+import guru.springframework.sfgpetclinic.model.ValueNotFoundException;
+
 public class IndexController {
 
     public String index(){
@@ -8,6 +10,6 @@ public class IndexController {
     }
 
     public String oupsHandler(){
-        return "notimplemented";
+        throw new ValueNotFoundException();
     }
 }
