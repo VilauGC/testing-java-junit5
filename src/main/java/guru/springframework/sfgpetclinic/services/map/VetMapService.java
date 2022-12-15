@@ -11,6 +11,7 @@ public class VetMapService extends AbstractMapService<Vet, Long> implements VetS
 
     private final SpecialtyService specialtyService;
 
+
     public VetMapService(SpecialtyService specialtyService) {
         this.specialtyService = specialtyService;
     }
@@ -37,7 +38,7 @@ public class VetMapService extends AbstractMapService<Vet, Long> implements VetS
             });
         }
 
-        return super.save(object);
+       return super.save(object);
     }
 
     @Override
