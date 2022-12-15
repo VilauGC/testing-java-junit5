@@ -6,6 +6,7 @@ import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.condition.*;
 
+import static org.assertj.core.api.AssertionsForClassTypes.assertThat;
 import static org.junit.jupiter.api.Assertions.*;
 import static org.junit.jupiter.api.Assumptions.assumeTrue;
 
@@ -23,10 +24,8 @@ class IndexControllerTest {
     @DisplayName("Test Proper View name is returned for index page")
     @Test
     void index() {
-
         assertEquals("index", indexController.index());
-//        assertEquals("indexd", indexController.index(), "Wrong View Returned");
-
+        assertThat(indexController.index()).isEqualTo("index");
     }
 
     @Test
